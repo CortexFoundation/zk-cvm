@@ -1,0 +1,43 @@
+[workspace]
+members = ["crates/lib/*"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+axon_primitives = { path = "crates/lib/primitives" }
+axon_utils = { path = "crates/lib/utils" }
+axon_storage = { path = "crates/lib/storage" }
+axon_mini_merkle_tree = { path = "crates/lib/mini_merkle_tree" }
+axon_job_processor = { path = "crates/lib/job_processor" }
+axon_merkle_tree = { path = "crates/lib/merkle_tree" }
+axon_types = { path = "crates/lib/types" }
+axon_contracts = { path = "crates/lib/contracts" }
+axon_constants = { path = "crates/lib/constants" }
+axon_dal = { path = "crates/lib/dal" }
+
+vlog = { path = "crates/lib/vlog" }
+
+chrono = "0.4"
+tracing = "0.1"
+alloy-primitives = "0.5"
+alloy-sol-types = "0.5"
+thiserror = "1.0"
+anyhow = "1.0"
+once_cell = "1.19"
+itertools = "0.12"
+rand = "0.8"
+
+serde_json = "1.0"
+serde = "1.0"
+
+blake2 = "0.10"
+sha2 = "0.10"
+
+tokio = "1.34"
+futures = "0.3"
+# async-trait = "0.1"
+
+vetric = { git = "https://github.com/neurons-labs/vetric.git" }

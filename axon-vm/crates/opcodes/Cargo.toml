@@ -1,0 +1,16 @@
+[package]
+name = "zkvm_opcodes"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "circuit_pricing_generator"
+path = "src/circuit_pricing_generator/main.rs"
+
+[dependencies]
+bitflags = { workspace = true }
+once_cell = { workspace = true }
+sha2 = { workspace = true }
+sha3 = { workspace = true }
+blake2 = { workspace = true }
+alloy-primitives = { workspace = true }

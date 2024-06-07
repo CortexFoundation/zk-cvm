@@ -1,0 +1,18 @@
+[package]
+name = "zkvm_primitives"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+zkvm_opcodes.workspace = true
+
+sha2 = { workspace = true }
+sha3 = { workspace = true }
+blake2 = { workspace = true }
+k256 = { workspace = true, features = ["arithmetic", "ecdsa"] }
+alloy-primitives = { workspace = true, features = ["serde"] }
+anyhow = "1.0"
+serde = { version = "1", features = ["derive"] }
+
+[lints.clippy]
+type_complexity = "allow"

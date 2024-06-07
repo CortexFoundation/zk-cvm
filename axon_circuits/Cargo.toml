@@ -1,0 +1,33 @@
+[package]
+name = "axon_circuits"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+derivative = "2"
+serde = { version = "1", features = ["derive"] }
+rand = "0.4"
+smallvec = { version = "*", features = [
+    "const_generics",
+    "const_new",
+    "serde",
+] }
+arrayvec = "0.7"
+zkvm_opcodes = {git = "https://github.com/neurons-labs/axon-vm.git"}
+boojum = {git = "https://github.com/vivijj/era-boojum.git"}
+bincode = "*"
+cs_derive = { git = "https://github.com/vivijj/era-boojum.git"}
+serde_json = "*"
+itertools = "0.10"
+rand_new = { package = "rand", version = "0.8" }
+hex = "*"
+seq-macro = "0.3"
+
+[features]
+default = []
+log_tracing = ["boojum/log_tracing"]
+verbose_circuits = []
+
+[dev-dependencies]
+hex = "*"
